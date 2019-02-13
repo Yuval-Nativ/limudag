@@ -1,0 +1,267 @@
+﻿body {
+    /*background-color: #C1EDFF;*/
+    /*background-color: white;*/
+    background-color: #fff;
+    font-family: 'Heebo', sans-serif;
+    color: #08213b;
+}
+
+video {
+    position: relative;
+    width: 90%;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0;
+}
+
+iframe {
+    border: 0;
+    height: calc(100vh - 58px);
+    left: 0;
+    position: absolute;
+    top: 58px;
+    width: 100%;
+}
+
+#gameArea {
+    height: calc(100vh - 58px);
+    width: auto;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    background-color: #f7fafb;
+    width: 100%;
+    border-bottom: solid 1px #9da7b1;
+    height: 58px;
+    position: absolute;
+    direction: rtl;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 3;
+}
+
+    /*כותרת משחק*/
+    header > a > p {
+        font-family: 'Heebo', sans-serif;
+        font-size: 12pt;
+        font-weight: 600;
+        position: relative;
+        top: -10px;
+        color: black;
+        display: inline-block;
+        direction: rtl;
+    }
+
+/*לוגו*/
+#logo {
+    width: auto;
+    height: 35px;
+    padding: 12px 30px 0px 0px;
+    direction: rtl;
+    float:right;
+}
+
+nav {
+    direction: rtl;
+    display: inline-block;
+    float: left;
+    margin-left: 30px;
+    padding-top: 16px;
+}
+
+    nav ul {
+        list-style: none;
+        direction: rtl;
+        display: block;
+        margin: 0;
+    }
+
+        nav ul li {
+            display: inline-block;
+            float: left;
+            direction: rtl;
+        }
+
+            nav ul li a {
+                display: block;
+                color: #08213b;
+                text-align: center;
+                padding: 3px 10px;
+                font-weight: 400;
+                font-size: 12pt;
+                font-family: 'Heebo', sans-serif;
+                direction: rtl;
+            }
+
+                nav ul li a:hover {
+                    cursor: pointer;
+                    font-family: 'Heebo', sans-serif;
+                    direction: rtl;
+                    text-decoration: underline;
+                }
+
+.closeAbout, .closeHowToPlay {
+    font-size: 160%;
+    position: relative;
+    bottom: 70px;
+    color: #ffffff;
+}
+
+#aboutDiv #aboutLogo {
+    display: block;
+    height: 85px;
+    width: auto;
+    margin: 0px auto 35px;
+}
+
+#aboutDiv #creators {
+    font-weight: 500;
+    font-size: 114%;
+}
+
+#aboutDiv p {
+    font-size: 95%;
+
+}
+
+#aboutDiv #hitDiv {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+#aboutDiv #hitDiv img {
+    display: inline-block;
+    float: right;
+    height: 45px;
+    width: auto;
+    padding: 8px 30px 0px 0;
+}
+
+#aboutDiv #hitDiv p {
+    display: inline-block;
+    float: left;
+    font-size: 85%;
+    text-align: right;
+    line-height: 1;
+
+}
+
+#aboutDiv #hitDiv p a {
+    display: inline-block;
+    float: left;
+    font-size: 90%;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 3;
+}
+
+.popUp {
+    background-color: white;
+    width: 400px;
+    position: fixed;
+    top: 140px;
+    z-index: 4;
+    text-align: center;
+    width: 700px;
+    padding: 10px;
+    padding-bottom: 25px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    direction: rtl;
+}
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
