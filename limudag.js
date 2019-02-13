@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"limudag_atlas_", frames: [[1354,1004,400,500],[552,3636,550,354],[1104,3029,550,275],[0,3668,550,375],[0,2767,550,385],[752,0,750,500],[752,502,700,500],[0,502,750,500],[651,1461,32,32],[1203,1852,550,330],[802,1004,550,416],[552,2529,550,367],[552,2160,550,367],[1104,2475,550,275],[802,1422,550,367],[0,1963,550,400],[651,1791,550,367],[1454,502,400,500],[0,3154,404,512],[0,2365,550,400],[1104,2752,550,275],[1504,0,400,500],[1354,1506,550,344],[0,0,750,500],[0,4045,32,32],[552,2898,550,367],[0,1461,649,500],[1104,2184,550,289],[406,3267,550,367],[0,1004,800,455]]}
+		{name:"limudag_atlas_", frames: [[1504,0,400,500],[552,3636,550,354],[1104,2475,550,275],[0,3668,550,375],[0,2767,550,385],[0,0,750,500],[752,502,700,500],[0,502,750,500],[651,1461,32,32],[1203,1852,550,330],[802,1004,550,416],[552,2160,550,367],[552,2529,550,367],[1104,2752,550,275],[552,2898,550,367],[0,1963,550,400],[406,3267,550,367],[1454,502,400,500],[0,3154,404,512],[0,2365,550,400],[1104,3029,550,275],[1354,1004,400,500],[1354,1506,550,344],[752,0,750,500],[0,4045,32,32],[651,1791,550,367],[0,1461,649,500],[1104,2184,550,289],[802,1422,550,367],[0,1004,800,455]]}
 ];
 
 
@@ -9347,23 +9347,22 @@ p.nominalBounds = new cjs.Rectangle(-62.8,-60.8,126,69.4);
 			background.y = 295;
 			stage.addChild(background);
 			var calcText = new createjs.Text();
-			calcText.x = 560;
+			calcText.x = 480;
 			calcText.y = 78;
 			calcText.font = "bold 26px Heebo";
 			calcText.text = "סיכום המשחק";
-			calcText.textAlign = "right";
+			calcText.textAlign = "center";
 			var winnerTxt = new createjs.Text();
-			winnerTxt.x = 544;
+			winnerTxt.x = calcText.x;
 			if (playersArr[0][2] > playersArr[1][2]) {
 				winnerTxt.text = playersArr[0][0] + ", ניצחת במשחק!";
 			} else if (playersArr[0][2] < playersArr[1][2]) {
 				winnerTxt.text = playersArr[1][0] + ", ניצחת במשחק!";
 			} else {
 				winnerTxt.text = "תוצאת המשחק היא תיקו!";
-				winnerTxt.x = 560;
 			}
 			winnerTxt.font = "500 15px Heebo";
-			winnerTxt.textAlign = "right";
+			winnerTxt.textAlign = "center";
 			winnerTxt.y = calcText.y + 30;
 			stage.addChild(calcText);
 			stage.addChild(winnerTxt);
@@ -9538,7 +9537,7 @@ p.nominalBounds = new cjs.Rectangle(-62.8,-60.8,126,69.4);
 			txtTurn.text = "התור עובר ל" + playersArr[currentP][0];
 			txtTurn.textAlign = "right";
 			txtTurn.lineHeight = 18;
-			txtTurn.lineWidth = 80;
+			txtTurn.lineWidth = 50;
 			txtTurn.y = -10;
 			popup.addChild(txtTurn);
 			var cTurn = new(playersArr[currentP][4]);
@@ -9599,11 +9598,11 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/limudag_atlas_.png?1550088502533", id:"limudag_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1550088503135", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1550088503135", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1550088503135", id:"an.TextInput"},
-		{src:"components/ui/src/combobox.js?1550088503135", id:"an.ComboBox"}
+		{src:"images/limudag_atlas_.png?1550090181942", id:"limudag_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1550090183127", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1550090183127", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1550090183127", id:"an.TextInput"},
+		{src:"components/ui/src/combobox.js?1550090183127", id:"an.ComboBox"}
 	],
 	preloads: []
 };
